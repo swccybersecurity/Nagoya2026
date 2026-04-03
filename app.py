@@ -6,7 +6,7 @@ from datetime import datetime, date
 
 # ── 頁面設定 ──────────────────────────────────────────────
 
-st.set_page_config(page_title=“名古屋親子遊 2026”, page_icon=“🎒”, layout=“centered”)
+st.set_page_config(page_title="名古屋親子遊 2026", page_icon="🎒", layout="centered")
 
 # ── 視覺主題 CSS ──────────────────────────────────────────
 
