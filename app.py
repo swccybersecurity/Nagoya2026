@@ -31,134 +31,163 @@ h2, h3 { color: #7c3a1e; }
 .stButton > button { background: linear-gradient(135deg, #e8855a, #c9572c); color: white; border: none; border-radius: 10px; font-weight: 500; }
 .stButton > button:hover { background: linear-gradient(135deg, #c9572c, #a8421e); color: white; }
 hr { border-color: #f0d9c4; }
+.yt-link { display: inline-block; background: #ff0000; color: white !important; padding: 6px 12px; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: bold; margin-bottom: 12px; box-shadow: 0 2px 5px rgba(255,0,0,0.3); }
+.yt-link:hover { background: #cc0000; }
 </style>
 """, unsafe_allow_html=True)
 
 RAW = "https://raw.githubusercontent.com/swccybersecurity/Nagoya2026/main"
 
 itinerary = {
-    "Day 1 (7/13) - 抵達與安頓": {"tasks": [
-        {"id": "d1_1", "task": "✈️ 抵達名古屋 NGO", "time": "15:30",
-         "image": f"{RAW}/airport.JPG",
-         "detail": "航班 CX530。領行李、過海關、裝網卡。", "map": "",
-         "transport_after": {"icon": "🚆", "label": "名鐵特急", "duration": "28 分鐘"}},
-        {"id": "d1_2", "task": "🏨 入住 HOTEL LiVEMAX BUDGET", "time": "17:20",
-         "image": f"{RAW}/Hotel.JPG",
-         "detail": "位於太閤通口。記得確認嬰兒推車是否方便進出電梯。", "map": "https://www.google.com/maps/search/?api=1&query=HOTEL+LiVEMAX+BUDGET+名古屋",
-         "transport_after": {"icon": "🚶", "label": "步行", "duration": "5 分鐘"}},
-        {"id": "d1_3", "task": "🍜 ESCA 地下街晚餐", "time": "18:30",
-         "image": f"{RAW}/Esca.WEBP",
-         "detail": "推薦：矢場味噌豬排、鳥開親子丼、吉田麵。", "map": "https://www.google.com/maps/search/?api=1&query=名古屋+ESCA+地下街",
-         "transport_after": None},
-    ]},
-    "Day 2 (7/14) - 經典市區": {"tasks": [
-        {"id": "d2_1", "task": "🏯 名古屋城散步", "time": "09:30",
-         "image": f"{RAW}/nagoya_castle.PNG",
-         "detail": "搭地鐵名城線至「市役所站」。平坦好推推車，慢慢散步拍照。", "map": "https://www.google.com/maps/search/?api=1&query=名古屋城",
-         "transport_after": {"icon": "🚇", "label": "地鐵名城線", "duration": "20 分鐘"}},
-        {"id": "d2_2", "task": "🛍️ 榮町商圈午餐 / 逛街", "time": "12:00",
-         "image": f"{RAW}/sakae.PNG",
-         "detail": "百貨公司多，有舒適冷氣和育嬰室。", "map": "https://www.google.com/maps/search/?api=1&query=名古屋+榮町商圈",
-         "transport_after": {"icon": "🚶", "label": "步行", "duration": "5 分鐘"}},
-        {"id": "d2_3", "task": "🌃 綠洲21 夜景", "time": "18:30",
-         "image": f"{RAW}/oasis21.PNG",
-         "detail": "宇宙船造型建築，晚上點燈很美，小孩可在底層廣場活動。", "map": "https://www.google.com/maps/search/?api=1&query=Oasis+21",
-         "transport_after": None},
-    ]},
-    "Day 3 (7/15) - 港區放電": {"tasks": [
-        {"id": "d3_1", "task": "🐠 名古屋港水族館", "time": "10:00",
-         "image": f"{RAW}/aquarium.JPG",
-         "detail": "搭地鐵名港線至「名古屋港站」。必看：海豚秀、小白鯨、企鵝。", "map": "https://www.google.com/maps/search/?api=1&query=名古屋港水族館",
-         "transport_after": {"icon": "🚶", "label": "步行", "duration": "3 分鐘"}},
-        {"id": "d3_2", "task": "🚢 南極觀測船富士號", "time": "14:00",
-         "image": f"{RAW}/fuji_ship.JPG",
-         "detail": "就在水族館旁邊，視小孩體力決定是否登船。", "map": "https://www.google.com/maps/search/?api=1&query=南極觀測船富士",
-         "transport_after": {"icon": "🚇", "label": "地鐵名港線", "duration": "35 分鐘"}},
-        {"id": "d3_3", "task": "🍽️ 港區周邊晚餐", "time": "18:00",
-         "image": f"{RAW}/Jetty.WEBP",
-         "detail": "在水族館周邊商場解決晚餐，避開市區下班人潮。", "map": "",
-         "transport_after": None},
-    ]},
-    "Day 4 (7/16) - 童話合掌村": {"tasks": [
-        {"id": "d4_1", "task": "🚌 出發一日遊巴士", "time": "08:00",
-         "image": f"{RAW}/Bus.WEBP",
-         "detail": "太閤通口集合。攜帶：輕便傘車、小孩安撫零食/玩具。", "map": "",
-         "transport_after": {"icon": "🚌", "label": "遊覽車", "duration": "約 2.5 小時"}},
-        {"id": "d4_2", "task": "🥩 飛驒高山老街散步", "time": "10:30",
-         "image": f"{RAW}/Takayama.JPG",
-         "detail": "必吃：飛驒牛握壽司、五平餅。", "map": "https://www.google.com/maps/search/?api=1&query=飛驒高山老街",
-         "transport_after": {"icon": "🚌", "label": "遊覽車", "duration": "約 1 小時"}},
-        {"id": "d4_3", "task": "🛖 白川鄉合掌村", "time": "13:30",
-         "image": f"{RAW}/Shirakawa.JPG",
-         "detail": "世界遺產打卡！觀景台需轉搭接駁車，推車需收折。", "map": "https://www.google.com/maps/search/?api=1&query=白川鄉合掌村",
-         "transport_after": {"icon": "🚌", "label": "遊覽車返回", "duration": "約 2.5 小時"}},
-        {"id": "d4_4", "task": "🏨 返回飯店", "time": "18:30",
-         "image": f"{RAW}/Hotel.JPG",
-         "detail": "預計 18:30-19:00 回到名古屋車站，在周邊吃晚餐。", "map": "",
-         "transport_after": None},
-    ]},
-    "Day 5 (7/17) - 樂高日": {"tasks": [
-        {"id": "d5_1", "task": "🧱 名古屋樂高樂園", "time": "10:00",
-         "image": f"{RAW}/Legolnad.JPG",
-         "detail": "搭青波線至「金城埠頭站」。專為 2-12 歲設計，先下載官方 App 查等待時間。", "map": "https://www.google.com/maps/search/?api=1&query=LEGOLAND+Japan",
-         "transport_after": {"icon": "🚶", "label": "步行", "duration": "5 分鐘"}},
-        {"id": "d5_2", "task": "🚄 磁浮鐵道館（彈性）", "time": "15:00",
-         "image": f"{RAW}/MuseumTrain.JPG",
-         "detail": "在樂高樂園旁邊。小孩還有體力的話，進去看超大新幹線！", "map": "https://www.google.com/maps/search/?api=1&query=磁浮鐵道館",
-         "transport_after": None},
-    ]},
-    "Day 6 (7/18) - 麵包超人": {"tasks": [
-        {"id": "d6_1", "task": "🍞 麵包超人兒童博物館", "time": "10:00",
-         "image": f"{RAW}/Anpanman.JPG",
-         "detail": "前往長島度假村，學齡前幼童的天堂！", "map": "https://www.google.com/maps/search/?api=1&query=名古屋麵包超人兒童博物館",
-         "transport_after": {"icon": "🚶", "label": "步行", "duration": "5 分鐘"}},
-        {"id": "d6_2", "task": "🛍️ 三井 Outlet 爵士之夢長島", "time": "13:00",
-         "image": f"{RAW}/Outlet.JPG",
-         "detail": "日本最大級 Outlet，爸媽輪流顧小孩去逛！", "map": "https://www.google.com/maps/search/?api=1&query=三井Outlet+Park+爵士之夢長島",
-         "transport_after": {"icon": "🚌", "label": "巴士返回", "duration": "約 1 小時"}},
-    ]},
-    "Day 7 (7/19) - 悠閒散步": {"tasks": [
-        {"id": "d7_1", "task": "⛩️ 大須觀音參拜", "time": "10:00",
-         "image": f"{RAW}/Osukanon.JPG",
-         "detail": "搭地鐵鶴舞線至「大須觀音站」。", "map": "https://www.google.com/maps/search/?api=1&query=大須觀音",
-         "transport_after": {"icon": "🚶", "label": "步行", "duration": "2 分鐘"}},
-        {"id": "d7_2", "task": "🍡 大須商店街逛街", "time": "10:30",
-         "image": f"{RAW}/Osustreet.JPG",
-         "detail": "有巨大雨棚，推嬰兒車很舒服。買藥妝、吃炸雞、糰子。", "map": "https://www.google.com/maps/search/?api=1&query=大須商店街",
-         "transport_after": {"icon": "🚇", "label": "地鐵", "duration": "15 分鐘"}},
-        {"id": "d7_3", "task": "🌳 久屋大通公園", "time": "15:00",
-         "image": f"{RAW}/Odoripark.JPG",
-         "detail": "讓小孩跑跳放電，大人坐著喝咖啡。", "map": "https://www.google.com/maps/search/?api=1&query=久屋大通公園",
-         "transport_after": None},
-    ]},
-    "Day 8 (7/20) - 犬山城日帰り": {"tasks": [
-        {"id": "d8_1", "task": "🏯 犬山城散步", "time": "09:30",
-         "image": f"{RAW}/Dogmount.jpg",
-         "detail": "搭名鐵犬山線至「犬山站」約 30 分鐘。日本現存最古老的天守閣（國寶），爬上天守可俯瞰木曾川美景。注意：天守閣樓梯陡，推車需寄放。", "map": "https://www.google.com/maps/search/?api=1&query=犬山城",
-         "transport_after": {"icon": "🚶", "label": "步行", "duration": "15 分鐘"}},
-        {"id": "d8_2", "task": "🍡 犬山老街散步", "time": "11:30",
-         "image": f"{RAW}/Dogmountst.WEBP",
-         "detail": "城下町風情的老街，推嬰兒車也方便。必吃：山椒煎餅、草莓大福、五平餅。", "map": "https://www.google.com/maps/search/?api=1&query=犬山老街",
-         "transport_after": {"icon": "🚆", "label": "名鐵返回名古屋", "duration": "約 30 分鐘"}},
-        {"id": "d8_3", "task": "🎁 車站周邊最後採買", "time": "16:00",
-         "image": f"{RAW}/Hotel.JPG",
-         "detail": "高島屋或名鐵百貨補齊伴手禮（小倉吐司餅乾、青柳外郎糕）。", "map": "https://www.google.com/maps/search/?api=1&query=名鐵百貨",
-         "transport_after": None},
-    ]},
-    "Day 9 (7/21) - 準備回家": {"tasks": [
-        {"id": "d9_1", "task": "☕ 名古屋特色早餐", "time": "08:00",
-         "image": f"{RAW}/Komeda.JPG",
-         "detail": "Komeda 咖啡：點飲料送小倉吐司，名古屋限定文化！", "map": "https://www.google.com/maps/search/?api=1&query=Komeda+Coffee",
-         "transport_after": {"icon": "🚶", "label": "步行", "duration": "10 分鐘"}},
-        {"id": "d9_2", "task": "🧳 飯店退房", "time": "10:00",
-         "image": f"{RAW}/Hotel.JPG",
-         "detail": "10:00 前退房。清點行李件數。", "map": "",
-         "transport_after": {"icon": "🚆", "label": "名鐵 μ-SKY", "duration": "28 分鐘"}},
-        {"id": "d9_3", "task": "✈️ 航班 CX531 返台", "time": "16:40",
-         "image": f"{RAW}/airport.JPG",
-         "detail": "中部國際機場。建議 13:30 前抵達！", "map": "",
-         "transport_after": None},
-    ]},
+    "Day 1 (7/13 星期一) - 抵達與安頓": {
+        "youtube": {"title": "網紅推薦：名古屋車站周邊必吃美食攻略", "url": "https://www.youtube.com/results?search_query=名古屋車站+美食"},
+        "tasks": [
+            {"id": "d1_1", "task": "✈️ 抵達名古屋 NGO", "time": "15:30",
+             "image": f"{RAW}/airport.JPG",
+             "detail": "航班 CX530。領行李、過海關、裝網卡。", "map": "",
+             "transport_after": {"icon": "🚆", "label": "名鐵特急", "duration": "28 分鐘"}},
+            {"id": "d1_2", "task": "🏨 入住 HOTEL LiVEMAX BUDGET", "time": "17:20",
+             "image": f"{RAW}/Hotel.JPG",
+             "detail": "位於太閤通口。記得確認嬰兒推車是否方便進出電梯。", "map": "https://www.google.com/maps/search/?api=1&query=HOTEL+LiVEMAX+BUDGET+名古屋",
+             "transport_after": {"icon": "🚶", "label": "步行", "duration": "5 分鐘"}},
+            {"id": "d1_3", "task": "🍜 ESCA 地下街晚餐", "time": "18:30",
+             "image": f"{RAW}/Esca.WEBP",
+             "detail": "推薦：矢場味噌豬排、鳥開親子丼、吉田麵。", "map": "https://www.google.com/maps/search/?api=1&query=名古屋+ESCA+地下街",
+             "transport_after": None},
+        ]
+    },
+    "Day 2 (7/14 星期二) - 經典市區": {
+        "youtube": {"title": "網紅帶路：名古屋市區一日遊，必踩景點", "url": "https://www.youtube.com/results?search_query=名古屋市區+景點"},
+        "tasks": [
+            {"id": "d2_1", "task": "🏯 名古屋城散步", "time": "09:30",
+             "image": f"{RAW}/nagoya_castle.PNG",
+             "detail": "搭地鐵名城線至「市役所站」。平坦好推推車，慢慢散步拍照。", "map": "https://www.google.com/maps/search/?api=1&query=名古屋城",
+             "transport_after": {"icon": "🚇", "label": "地鐵名城線", "duration": "20 分鐘"}},
+            {"id": "d2_2", "task": "🛍️ 榮町商圈午餐 / 逛街", "time": "12:00",
+             "image": f"{RAW}/sakae.PNG",
+             "detail": "百貨公司多，有舒適冷氣和育嬰室。", "map": "https://www.google.com/maps/search/?api=1&query=名古屋+榮町商圈",
+             "transport_after": {"icon": "🚶", "label": "步行", "duration": "5 分鐘"}},
+            {"id": "d2_3", "task": "🌃 綠洲21 夜景", "time": "18:30",
+             "image": f"{RAW}/oasis21.PNG",
+             "detail": "宇宙船造型建築，晚上點燈很美，小孩可在底層廣場活動。", "map": "https://www.google.com/maps/search/?api=1&query=Oasis+21",
+             "transport_after": None},
+        ]
+    },
+    "Day 3 (7/15 星期三) - 港區放電": {
+        "youtube": {"title": "親子首選：名古屋港水族館全攻略", "url": "https://www.youtube.com/results?search_query=名古屋港水族館"},
+        "tasks": [
+            {"id": "d3_1", "task": "🐠 名古屋港水族館", "time": "10:00",
+             "image": f"{RAW}/aquarium.JPG",
+             "detail": "搭地鐵名港線至「名古屋港站」。必看：海豚秀、小白鯨、企鵝。", "map": "https://www.google.com/maps/search/?api=1&query=名古屋港水族館",
+             "transport_after": {"icon": "🚶", "label": "步行", "duration": "3 分鐘"}},
+            {"id": "d3_2", "task": "🚢 南極觀測船富士號", "time": "14:00",
+             "image": f"{RAW}/fuji_ship.JPG",
+             "detail": "就在水族館旁邊，視小孩體力決定是否登船。", "map": "https://www.google.com/maps/search/?api=1&query=南極觀測船富士",
+             "transport_after": {"icon": "🚇", "label": "地鐵名港線", "duration": "35 分鐘"}},
+            {"id": "d3_3", "task": "🍽️ 港區周邊晚餐", "time": "18:00",
+             "image": f"{RAW}/Jetty.WEBP",
+             "detail": "在水族館周邊商場解決晚餐，避開市區下班人潮。", "map": "",
+             "transport_after": None},
+        ]
+    },
+    "Day 4 (7/16 星期四) - 童話合掌村": {
+        "youtube": {"title": "絕美仙境：白川鄉合掌村與飛驒高山散策", "url": "https://www.youtube.com/results?search_query=白川鄉合掌村+一日遊"},
+        "tasks": [
+            {"id": "d4_1", "task": "🚌 出發一日遊巴士", "time": "08:00",
+             "image": f"{RAW}/Bus.WEBP",
+             "detail": "太閤通口集合。攜帶：輕便傘車、小孩安撫零食/玩具。", "map": "",
+             "transport_after": {"icon": "🚌", "label": "遊覽車", "duration": "約 2.5 小時"}},
+            {"id": "d4_2", "task": "🥩 飛驒高山老街散步", "time": "10:30",
+             "image": f"{RAW}/Takayama.JPG",
+             "detail": "必吃：飛驒牛握壽司、五平餅。", "map": "https://www.google.com/maps/search/?api=1&query=飛驒高山老街",
+             "transport_after": {"icon": "🚌", "label": "遊覽車", "duration": "約 1 小時"}},
+            {"id": "d4_3", "task": "🛖 白川鄉合掌村", "time": "13:30",
+             "image": f"{RAW}/Shirakawa.JPG",
+             "detail": "世界遺產打卡！觀景台需轉搭接駁車，推車需收折。", "map": "https://www.google.com/maps/search/?api=1&query=白川鄉合掌村",
+             "transport_after": {"icon": "🚌", "label": "遊覽車返回", "duration": "約 2.5 小時"}},
+            {"id": "d4_4", "task": "🏨 返回飯店", "time": "18:30",
+             "image": f"{RAW}/Hotel.JPG",
+             "detail": "預計 18:30-19:00 回到名古屋車站，在周邊吃晚餐。", "map": "",
+             "transport_after": None},
+        ]
+    },
+    "Day 5 (7/17 星期五) - 樂高日": {
+        "youtube": {"title": "小孩瘋狂：名古屋樂高樂園設施心得", "url": "https://www.youtube.com/results?search_query=名古屋樂高樂園"},
+        "tasks": [
+            {"id": "d5_1", "task": "🧱 名古屋樂高樂園", "time": "10:00",
+             "image": f"{RAW}/Legolnad.JPG",
+             "detail": "搭青波線至「金城埠頭站」。專為 2-12 歲設計，先下載官方 App 查等待時間。", "map": "https://www.google.com/maps/search/?api=1&query=LEGOLAND+Japan",
+             "transport_after": {"icon": "🚶", "label": "步行", "duration": "5 分鐘"}},
+            {"id": "d5_2", "task": "🚄 磁浮鐵道館（彈性）", "time": "15:00",
+             "image": f"{RAW}/MuseumTrain.JPG",
+             "detail": "在樂高樂園旁邊。小孩還有體力的話，進去看超大新幹線！", "map": "https://www.google.com/maps/search/?api=1&query=磁浮鐵道館",
+             "transport_after": None},
+        ]
+    },
+    "Day 6 (7/18 星期六) - 麵包超人": {
+        "youtube": {"title": "長島度假村：麵包超人博物館＆三井Outlet", "url": "https://www.youtube.com/results?search_query=名古屋+麵包超人博物館"},
+        "tasks": [
+            {"id": "d6_1", "task": "🍞 麵包超人兒童博物館", "time": "10:00",
+             "image": f"{RAW}/Anpanman.JPG",
+             "detail": "前往長島度假村，學齡前幼童的天堂！", "map": "https://www.google.com/maps/search/?api=1&query=名古屋麵包超人兒童博物館",
+             "transport_after": {"icon": "🚶", "label": "步行", "duration": "5 分鐘"}},
+            {"id": "d6_2", "task": "🛍️ 三井 Outlet 爵士之夢長島", "time": "13:00",
+             "image": f"{RAW}/Outlet.JPG",
+             "detail": "日本最大級 Outlet，爸媽輪流顧小孩去逛！", "map": "https://www.google.com/maps/search/?api=1&query=三井Outlet+Park+爵士之夢長島",
+             "transport_after": {"icon": "🚌", "label": "巴士返回", "duration": "約 1 小時"}},
+        ]
+    },
+    "Day 7 (7/19 星期日) - 悠閒散步": {
+        "youtube": {"title": "在地這樣逛：大須觀音與大須商店街美食", "url": "https://www.youtube.com/results?search_query=大須商店街+必吃"},
+        "tasks": [
+            {"id": "d7_1", "task": "⛩️ 大須觀音參拜", "time": "10:00",
+             "image": f"{RAW}/Osukanon.JPG",
+             "detail": "搭地鐵鶴舞線至「大須觀音站」。", "map": "https://www.google.com/maps/search/?api=1&query=大須觀音",
+             "transport_after": {"icon": "🚶", "label": "步行", "duration": "2 分鐘"}},
+            {"id": "d7_2", "task": "🍡 大須商店街逛街", "time": "10:30",
+             "image": f"{RAW}/Osustreet.JPG",
+             "detail": "有巨大雨棚，推嬰兒車很舒服。買藥妝、吃炸雞、糰子。", "map": "https://www.google.com/maps/search/?api=1&query=大須商店街",
+             "transport_after": {"icon": "🚇", "label": "地鐵", "duration": "15 分鐘"}},
+            {"id": "d7_3", "task": "🌳 久屋大通公園", "time": "15:00",
+             "image": f"{RAW}/Odoripark.JPG",
+             "detail": "讓小孩跑跳放電，大人坐著喝咖啡。", "map": "https://www.google.com/maps/search/?api=1&query=久屋大通公園",
+             "transport_after": None},
+        ]
+    },
+    "Day 8 (7/20 星期一) - 犬山城日帰り": {
+        "youtube": {"title": "國寶天守閣：犬山城與下町老街慢遊", "url": "https://www.youtube.com/results?search_query=犬山城+老街"},
+        "tasks": [
+            {"id": "d8_1", "task": "🏯 犬山城散步", "time": "09:30",
+             "image": f"{RAW}/Dogmount.jpg",
+             "detail": "搭名鐵犬山線至「犬山站」約 30 分鐘。日本現存最古老的天守閣（國寶），爬上天守可俯瞰木曾川美景。注意：天守閣樓梯陡，推車需寄放。", "map": "https://www.google.com/maps/search/?api=1&query=犬山城",
+             "transport_after": {"icon": "🚶", "label": "步行", "duration": "15 分鐘"}},
+            {"id": "d8_2", "task": "🍡 犬山老街散步", "time": "11:30",
+             "image": f"{RAW}/Dogmountst.WEBP",
+             "detail": "城下町風情的老街，推嬰兒車也方便。必吃：山椒煎餅、草莓大福、五平餅。", "map": "https://www.google.com/maps/search/?api=1&query=犬山老街",
+             "transport_after": {"icon": "🚆", "label": "名鐵返回名古屋", "duration": "約 30 分鐘"}},
+            {"id": "d8_3", "task": "🎁 車站周邊最後採買", "time": "16:00",
+             "image": f"{RAW}/Hotel.JPG",
+             "detail": "高島屋或名鐵百貨補齊伴手禮（小倉吐司餅乾、青柳外郎糕）。", "map": "https://www.google.com/maps/search/?api=1&query=名鐵百貨",
+             "transport_after": None},
+        ]
+    },
+    "Day 9 (7/21 星期二) - 準備回家": {
+        "youtube": {"title": "體驗在地文化：買咖啡送吐司的名古屋早餐", "url": "https://www.youtube.com/results?search_query=名古屋+Komeda+早餐"},
+        "tasks": [
+            {"id": "d9_1", "task": "☕ 名古屋特色早餐", "time": "08:00",
+             "image": f"{RAW}/Komeda.JPG",
+             "detail": "Komeda 咖啡：點飲料送小倉吐司，名古屋限定文化！", "map": "https://www.google.com/maps/search/?api=1&query=Komeda+Coffee",
+             "transport_after": {"icon": "🚶", "label": "步行", "duration": "10 分鐘"}},
+            {"id": "d9_2", "task": "🧳 飯店退房", "time": "10:00",
+             "image": f"{RAW}/Hotel.JPG",
+             "detail": "10:00 前退房。清點行李件數。", "map": "",
+             "transport_after": {"icon": "🚆", "label": "名鐵 μ-SKY", "duration": "28 分鐘"}},
+            {"id": "d9_3", "task": "✈️ 航班 CX531 返台", "time": "16:40",
+             "image": f"{RAW}/airport.JPG",
+             "detail": "中部國際機場。建議 13:30 前抵達！", "map": "",
+             "transport_after": None},
+        ]
+    },
 }
 
 TRIP_START = date(2026, 7, 13)
@@ -283,6 +312,13 @@ if mode == "每日行程":
         st.info("⚠️ 天氣預報需要網路連線")
 
     st.subheader(selected_day)
+    
+    # === 新增：YouTube 推薦區塊 ===
+    yt_info = itinerary[selected_day].get("youtube")
+    if yt_info:
+        st.markdown(f'<a href="{yt_info["url"]}" target="_blank" class="yt-link">▶️ {yt_info["title"]}</a>', unsafe_allow_html=True)
+    # ==============================
+
     tasks = itinerary[selected_day]["tasks"]
 
     for i, task_info in enumerate(tasks):
