@@ -38,11 +38,11 @@ function hlClass(variant) {
     class="reveal mb-8 overflow-hidden rounded-card-lg border border-ivory-300 bg-ivory-50 shadow-card-sm transition-all duration-300 ease-custom hover:-translate-y-0.5 hover:shadow-card-lg"
   >
     <!-- Cover image -->
-    <div class="relative w-full overflow-hidden" style="aspect-ratio: 2/1;">
+    <div class="relative h-40 w-full overflow-hidden md:h-52">
       <img
         :src="day.isDualPlan ? currentPlan()?.coverImg : day.cover"
         :alt="day.title"
-        class="h-full w-full object-cover transform-gpu transition-transform duration-500 hover:scale-[1.03]"
+        class="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
         loading="lazy"
         onerror="this.style.display='none'"
       />
