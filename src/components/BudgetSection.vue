@@ -40,7 +40,7 @@ const maxAmt = computed(() => Math.max(...BUDGET_DAYS.map((d) => d.amount)))
       <div class="reveal mx-auto max-w-sm rounded-card-lg bg-gradient-to-br from-yamabuki-400 to-kaki-500 px-8 py-6 text-center text-white shadow-card-kaki">
         <p class="font-body text-sm uppercase tracking-[0.12em] opacity-80">9 天預估總花費</p>
         <p class="mt-1 font-heading text-4xl font-bold md:text-5xl">¥{{ total }}</p>
-        <p class="mt-1 font-body text-xs opacity-70">以上為日幣，約 2 大 2 小行程花費</p>
+        <p class="mt-1 font-body text-xs opacity-70">以上為日幣，約 3 大 2 小行程花費</p>
       </div>
     </div>
   </section>

@@ -2,7 +2,7 @@ const B = import.meta.env.BASE_URL + 'images/'
 
 export const TRIP = {
   title: '名古屋親子遊 2026',
-  subtitle: '四大人．兩小孩的夏日冒險',
+  subtitle: '三大人．兩小孩的夏日冒險',
   start: new Date('2026-07-13'),
   end:   new Date('2026-07-21'),
   flightOut: 'CX530',
@@ -153,8 +153,8 @@ export const days = [
     highlights: [
       { variant: 'sky',      title: '🐬 必看：海豚秀',
         body: '入場後立即確認海豚秀時間。白鯨館、企鵝館也是重點，5 歲女生大概捨不得走。全館室內冷氣，7 月正午最適合泡在這裡。' },
-      { variant: 'yamabuki', title: '💴 票價精算（2大2小）',
-        list: ['大人 ¥2,030 × 2 = ¥4,060', '5 歲 ¥500 × 1 = ¥500', '3 歲免費', '南極觀測船 ¥300 × 2 = ¥600'] },
+      { variant: 'yamabuki', title: '💴 票價精算（3大2小）',
+        list: ['大人 ¥2,030 × 3 = ¥6,090', '5 歲 ¥500 × 1 = ¥500', '3 歲免費', '南極觀測船 ¥300 × 3 = ¥900'] },
     ],
   },
 
