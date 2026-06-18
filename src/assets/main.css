@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Google Fonts ── */
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    background-color: #FAF1E4;
+    color: #3D1B0E;
+  }
+  h1, h2, h3, h4 { font-family: 'Fredoka', sans-serif; }
+}
+
+/* ── Focus ── */
+:focus-visible {
+  outline: 3px solid #F6AD3C;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── Day badge gradients ── */
+@layer components {
+  .badge-day-1 { background: linear-gradient(135deg, #F6AD3C, #E8961A); }
+  .badge-day-2 { background: linear-gradient(135deg, #F06A4A, #C93D14); }
+  .badge-day-3 { background: linear-gradient(135deg, #38BDF8, #0284C7); }
+  .badge-day-4 { background: linear-gradient(135deg, #A893E8, #7358A0); }
+  .badge-day-5 { background: linear-gradient(135deg, #FB923C, #EA580C); }
+  .badge-day-6 { background: linear-gradient(135deg, #F472B6, #EC4899); }
+  .badge-day-7 { background: linear-gradient(135deg, #34D399, #059669); }
+  .badge-day-8 { background: linear-gradient(135deg, #F6AD3C, #E55125); }
+  .badge-day-9 { background: linear-gradient(135deg, #94A3B8, #64748B); }
+}
+
+/* ── Custom utilities ── */
+@layer utilities {
+  .bg-hero {
+    background:
+      radial-gradient(ellipse at top left,  rgba(246,173,60,.14) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(229,81,37,.10) 0%, transparent 50%),
+      linear-gradient(180deg, #FAF1E4 0%, #F2EFE9 100%);
+  }
+
+  .text-gradient-accent {
+    background: linear-gradient(120deg, #F6AD3C, #E55125);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .scrollbar-none::-webkit-scrollbar { display: none; }
+  .scrollbar-none { scrollbar-width: none; }
+}
+
+/* ── Scroll reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(.22,.61,.36,1), transform 0.7s cubic-bezier(.22,.61,.36,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Plan tab transition ── */
+.plan-enter-active { transition: all 0.35s cubic-bezier(.22,.61,.36,1); }
+.plan-leave-active { transition: all 0.2s cubic-bezier(.22,.61,.36,1); }
+.plan-enter-from   { opacity: 0; transform: translateY(-10px); }
+.plan-leave-to     { opacity: 0; transform: translateY(-6px); }
