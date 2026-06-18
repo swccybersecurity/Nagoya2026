@@ -79,15 +79,15 @@ export const CHECKLIST = [
 ]
 
 export const BUDGET_DAYS = [
-  { day: 1, label: 'Day 1・移動日',       amount: 3500  },
-  { day: 2, label: 'Day 2・名古屋城',     amount: 4200  },
-  { day: 3, label: 'Day 3・水族館',       amount: 7200  },
-  { day: 4, label: 'Day 4・白川鄉/常滑',  amount: 5500  },
-  { day: 5, label: 'Day 5・LEGOLAND',     amount: 25000 },
-  { day: 6, label: 'Day 6・麵包超人',     amount: 12000 },
-  { day: 7, label: 'Day 7・大須商圈',     amount: 4000  },
-  { day: 8, label: 'Day 8・犬山城',       amount: 6500  },
-  { day: 9, label: 'Day 9・返程日',       amount: 3000  },
+  { day: 1, label: 'Day 1・移動日',       amount: 9000  },
+  { day: 2, label: 'Day 2・名古屋城',     amount: 14000 },
+  { day: 3, label: 'Day 3・水族館',       amount: 17000 },
+  { day: 4, label: 'Day 4・白川鄉/常滑',  amount: 30000 },
+  { day: 5, label: 'Day 5・LEGOLAND',     amount: 35000 },
+  { day: 6, label: 'Day 6・麵包超人',     amount: 22000 },
+  { day: 7, label: 'Day 7・大須商圈',     amount: 8000  },
+  { day: 8, label: 'Day 8・犬山城',       amount: 12000 },
+  { day: 9, label: 'Day 9・返程日',       amount: 7000  },
 ]
 
 export const days = [
@@ -97,7 +97,7 @@ export const days = [
     title: '抵達！名古屋初見',
     badgeClass: 'badge-day-1',
     tag: { text: '移動日', cls: 'bg-yamabuki-100 text-yamabuki-700 border-yamabuki-300' },
-    budget: { label: '當日預估花費', amount: '3,500', note: '含機場交通、晚餐' },
+    budget: { label: '當日預估花費', amount: '9,000', note: '含機場交通（¥3,750）、晚餐、雜支' },
     cover: B + 'airport.jpg',
     timeline: [
       { time: '15:30', html: '✈️ 抵達中部國際機場（NGO）— 航班 CX530<br><span class="text-ivory-600 text-sm">領行李 → 過海關 → 裝網卡</span>' },
@@ -119,7 +119,7 @@ export const days = [
     title: '名古屋城 → 榮町商圈',
     badgeClass: 'badge-day-2',
     tag: { text: '市區探索', cls: 'bg-kaki-50 text-kaki-600 border-kaki-300' },
-    budget: { label: '當日預估花費', amount: '4,200', note: '含票價、午晚餐' },
+    budget: { label: '當日預估花費', amount: '14,000', note: '含城票（¥1,500）、交通、午晚餐、零食' },
     cover: B + 'nagoya_castle.png',
     timeline: [
       { time: '09:30', html: '🏯 名古屋城散步<br><span class="text-ivory-600 text-sm">地鐵名城線「市役所站」，大人 ¥500 / 國中以下免費</span>' },
@@ -142,7 +142,7 @@ export const days = [
     title: '名古屋港水族館',
     badgeClass: 'badge-day-3',
     tag: { text: '親子必去', cls: 'bg-sky-50 text-sky-700 border-sky-200' },
-    budget: { label: '當日預估花費', amount: '7,200', note: '水族館＋富士號＋餐費' },
+    budget: { label: '當日預估花費', amount: '17,000', note: '水族館票（¥6,590）＋富士號（¥900）＋餐費' },
     cover: B + 'aquarium.jpg',
     timeline: [
       { time: '10:00', html: '🐠 名古屋港水族館<br><span class="text-ivory-600 text-sm">地鐵名港線「名古屋港站」，大人 ¥2,030 / 5歲 ¥500 / 3歲免費</span>' },
@@ -172,7 +172,7 @@ export const days = [
         label: '🏔️ 白川鄉',
         sublabel: '世界遺產路線',
         coverImg: B + 'shirakawa.jpg',
-        budget: { label: '當日預估花費', amount: '6,500', note: '含巴士、午餐、合掌村' },
+        budget: { label: '當日預估花費', amount: '30,000', note: '遊覽車（¥8,000～10,000/人×3）＋午餐＋雜支' },
         timeline: [
           { time: '08:00', html: '🚌 太閤通口搭遊覽車出發<br><span class="text-ivory-600 text-sm">攜帶：輕便折疊車、零食玩具備用</span>' },
           { time: '10:30', html: '🛖 抵達白川鄉合掌村<br><span class="text-ivory-600 text-sm">自由漫步合掌屋群落，荻町城跡展望台俯瞰全景</span>' },
@@ -192,7 +192,7 @@ export const days = [
         label: '🏺 常滑',
         sublabel: '輕鬆備案路線',
         coverImg: B + 'osustreet.jpg',
-        budget: { label: '當日預估花費', amount: '3,800', note: '含交通、午餐、陶藝體驗' },
+        budget: { label: '當日預估花費', amount: '5,000', note: '含交通（¥300×3）、午餐、陶藝體驗' },
         timeline: [
           { time: '09:30', html: '🚆 名古屋站搭名鐵前往常滑站<br><span class="text-ivory-600 text-sm">約 40 分鐘，兒童票 ¥290</span>' },
           { time: '10:30', html: '🏺 やきもの散歩道<br><span class="text-ivory-600 text-sm">招財貓大道、古窯跡、陶磁器煙囪</span>' },
@@ -217,7 +217,7 @@ export const days = [
     title: '樂高王國征服日',
     badgeClass: 'badge-day-5',
     tag: { text: '小孩爆炸', cls: 'bg-orange-50 text-orange-600 border-orange-300' },
-    budget: { label: '當日預估花費', amount: '25,000', note: '含 4 張門票（門票建議飯店購）' },
+    budget: { label: '當日預估花費', amount: '35,000', note: '含 5 張門票（¥6,200×3＋¥4,700×2＝¥28,000）＋餐費' },
     cover: B + 'legolnad.jpg',
     timeline: [
       { time: '09:30', html: '🧱 出發前往 LEGOLAND Japan<br><span class="text-ivory-600 text-sm">あおなみ線「金城埠頭站」，飯店 1 站直達</span>' },
@@ -239,7 +239,7 @@ export const days = [
     title: '麵包超人 × 三井 Outlet',
     badgeClass: 'badge-day-6',
     tag: { text: '長島度假村', cls: 'bg-pink-50 text-pink-600 border-pink-300' },
-    budget: { label: '當日預估花費', amount: '12,000', note: '博物館票＋購物＋交通＋餐費' },
+    budget: { label: '當日預估花費', amount: '22,000', note: '博物館票（¥2,500×5＝¥12,500）＋交通＋購物＋餐費' },
     cover: B + 'anpanman.jpg',
     timeline: [
       { time: '09:00', html: '🚌 名鐵バスセンター搭高速巴士<br><span class="text-ivory-600 text-sm">前往長島度假村，約 40 分鐘</span>' },
@@ -262,7 +262,7 @@ export const days = [
     title: '大須商圈悠閒散步',
     badgeClass: 'badge-day-7',
     tag: { text: '輕鬆日', cls: 'bg-emerald-50 text-emerald-700 border-emerald-200' },
-    budget: { label: '當日預估花費', amount: '4,000', note: '含餐費、零食、藥妝' },
+    budget: { label: '當日預估花費', amount: '8,000', note: '含午晚餐、零食、藥妝、雜購' },
     cover: B + 'osustreet.jpg',
     timeline: [
       { time: '10:00', html: '⛩️ 大須觀音參拜<br><span class="text-ivory-600 text-sm">地鐵鶴舞線「大須觀音站」</span>' },
@@ -285,7 +285,7 @@ export const days = [
     title: '犬山城下町日帰り',
     badgeClass: 'badge-day-8',
     tag: { text: '國寶天守閣', cls: 'bg-yamabuki-100 text-yamabuki-700 border-yamabuki-300' },
-    budget: { label: '當日預估花費', amount: '6,500', note: '含交通、票價、午餐、伴手禮' },
+    budget: { label: '當日預估花費', amount: '12,000', note: '含交通、城票（¥3,400）、午餐、伴手禮採買' },
     cover: B + 'dogmount.jpg',
     timeline: [
       { time: '09:00', html: '🚆 名古屋站搭名鐵犬山線<br><span class="text-ivory-600 text-sm">約 30 分鐘抵達犬山站</span>' },
@@ -309,7 +309,7 @@ export const days = [
     title: 'Komeda 早餐 → 返程',
     badgeClass: 'badge-day-9',
     tag: { text: '返程日', cls: 'bg-slate-100 text-slate-600 border-slate-300' },
-    budget: { label: '當日預估花費', amount: '3,000', note: '含早餐、機場交通' },
+    budget: { label: '當日預估花費', amount: '7,000', note: '含早餐、機場交通（¥3,750）、雜支' },
     cover: B + 'komeda.jpg',
     timeline: [
       { time: '08:00', html: '☕ Komeda 咖啡早餐<br><span class="text-ivory-600 text-sm">點飲料送小倉厚片吐司（Morning Service），名古屋必體驗！</span>' },
